@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.karhabty.controller.LoginController">
+   <children>
+      <ImageView fitHeight="487.0" fitWidth="727.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/loginbck.jpg" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="email_login" focusColor="#e2a83b" labelFloat="true" layoutX="70.0" layoutY="115.0" maxWidth="232.0" minWidth="232.0" prefHeight="31.0" prefWidth="232.0" promptText="Email">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="password_login" focusColor="#e2a83b" labelFloat="true" layoutX="70.0" layoutY="191.0" maxWidth="232.0" minWidth="232.0" prefHeight="31.0" prefWidth="232.0" promptText="Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton fx:id="signin_btn" buttonType="RAISED" layoutX="119.0" layoutY="263.0" onAction="#handleButtonAction" prefHeight="36.0" prefWidth="134.0" ripplerFill="#e2a83b" style="-fx-background-color: #bd0826;" text="Connectez-vous" textFill="WHITE" />
+      <JFXButton fx:id="signup_btn" layoutX="64.0" layoutY="384.0" onAction="#handleButtonAction" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #bd0826;" text="Inscrivez-vous" textFill="WHITE" />
+      <JFXButton fx:id="forgot_pwd" layoutX="181.0" layoutY="384.0" onAction="#handleButtonAction" prefHeight="36.0" prefWidth="133.0" style="-fx-background-color: #bd0826;" text="Mot de passe oublié ?" textFill="WHITE" />
+      <Label fx:id="login_errorlabel" layoutX="56.0" layoutY="440.0" textFill="#bd0826">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F4F4F4;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.karhabty.controller.FXMLDocumentAlertController">
+   <children>
+      <JFXComboBox fx:id="MarqueCombobox" layoutX="161.0" layoutY="97.0" prefHeight="25.0" prefWidth="278.0" promptText="Marque" />
+      <JFXComboBox fx:id="ModelCombobox" layoutX="161.0" layoutY="198.0" prefHeight="25.0" prefWidth="278.0" promptText="Model" />
+      <JFXButton buttonType="RAISED" layoutX="523.0" layoutY="354.0" onAction="#ValideButton" prefHeight="32.0" prefWidth="63.0" ripplerFill="#f1b717" style="-fx-background-color: #bd0826;" text="Valider" textFill="WHITE" />
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="354.0" onAction="#backButton" prefHeight="32.0" prefWidth="63.0" ripplerFill="#f1b717" style="-fx-background-color: #bd0826;" text="Annuler" textFill="WHITE" />
+   </children>
+   <effect>
+      <DropShadow blurType="GAUSSIAN" />
+   </effect>
+</AnchorPane>

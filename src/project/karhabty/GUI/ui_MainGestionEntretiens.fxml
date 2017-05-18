@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1080.0" stylesheets="@CascadeStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.karhabty.controller.MainGestionEntretiensController">
+   <children>
+      <TableView fx:id="CARS_Tab" layoutX="140.0" layoutY="125.0" onMouseClicked="#CustomizedDisplay" prefHeight="375.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="Matricule" prefWidth="75.0" text="Matricule" />
+            <TableColumn fx:id="Marque" prefWidth="75.0" text="Marque" />
+            <TableColumn fx:id="Modele" prefWidth="75.0" text="Modele" />
+          <TableColumn fx:id="DateMisCirculation" prefWidth="75.0" text="Date de mis en circulation" />
+            <TableColumn fx:id="PuissanceFiscale" prefWidth="75.0" text="Puissance fiscale" />
+            <TableColumn fx:id="ChevauxDyn" prefWidth="75.0" text="nombre chevaux Dyn" />
+            <TableColumn fx:id="Kilometrage" prefWidth="75.0" text="Kilometrage" />
+            <TableColumn fx:id="Carburant" prefWidth="75.0" text="Carburant" />
+            <TableColumn fx:id="Transmission" prefWidth="75.0" text="Transmission" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="AddNewCar_Button" layoutX="836.0" layoutY="528.0" onAction="#handleButtonAction" text="Nouvelle voiture" />
+      <JFXTextField fx:id="Search_TF" focusColor="#bd0826" layoutX="140.0" layoutY="67.0" maxWidth="218.0" minWidth="250.0" onKeyReleased="#Search_cars" prefHeight="31.0" prefWidth="218.0" />
+      <Label fx:id="User_Lab" layoutX="912.0" layoutY="50.0" />
+      <JFXButton fx:id="Excel_Button" layoutX="740.0" layoutY="528.0" onAction="#Excel" text="Excel" />
+      <JFXHamburger fx:id="hamburger" layoutX="1024.0" layoutY="41.0" />
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" prefHeight="680.0" prefWidth="180.0" />
+   </children>
+</AnchorPane>

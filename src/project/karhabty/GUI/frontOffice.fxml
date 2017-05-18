@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1286.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.karhabty.controller.FrontOfficeController">
+   <children>
+      <TabPane fx:id="tabpaneFrontOffice" prefHeight="760.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Mon suivi">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="11.0" layoutY="14.0" prefHeight="692.0" prefWidth="976.0">
+                           <children>
+                              <GridPane fx:id="idontknow" layoutX="2.0" layoutY="8.0" onMouseClicked="#setbuttonsDisabled" prefHeight="667.0" prefWidth="968.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="368.0" minWidth="10.0" prefWidth="275.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="694.0" minWidth="10.0" prefWidth="694.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="293.0" minHeight="10.0" prefHeight="293.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="217.0" minHeight="10.0" prefHeight="134.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="269.0" minHeight="10.0" prefHeight="269.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <GridPane prefHeight="172.0" prefWidth="77.0" GridPane.rowIndex="2">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="Mes Tests" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                          <JFXButton fx:id="nouveauTest_BT" buttonType="RAISED" onAction="#aller_vers_nouveu_Test" prefHeight="25.0" prefWidth="139.0" ripplerFill="#b0bf4a" style="-fx-background-color: #e41010;" text="Nouveau test" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                       </children>
+                                    </GridPane>
+                                    <TableView fx:id="F_monSuivi_Cours_TV" onMouseClicked="#activerBouttonCours" prefHeight="171.0" prefWidth="397.0" GridPane.columnIndex="1">
+                                      <columns>
+                                        <TableColumn fx:id="F_monSuivi_CoursNom_CV" prefWidth="330.0" text="nom" />
+                                        <TableColumn fx:id="F_monSuivi_module_TV" prefWidth="98.0" text="module" />
+                                          <TableColumn fx:id="F_monSuivi_CoursAvancement_TV" prefWidth="120.0" text="avancement" />
+                                          <TableColumn fx:id="F_monSuivi_CoursDAte_TV" prefWidth="145.0" text="date d'inscription" />
+                                      </columns>
+                                    </TableView>
+                                    <TableView fx:id="F_monSuivi_Tests_TV" onMouseClicked="#activerBoutonTest" prefHeight="310.0" prefWidth="700.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                      <columns>
+                                        <TableColumn fx:id="F_monSuivi_Tests_Libelle_TV" prefWidth="329.0" text="Libellé" />
+                                        <TableColumn fx:id="F_monSuivi_Tests_module_TV" prefWidth="123.0" text="Module" />
+                                          <TableColumn fx:id="F_monSuivi_Tests_date_TV" prefWidth="147.0" text="Date de passage" />
+                                          <TableColumn fx:id="F_monSuivi_Tests_note_TV" prefWidth="94.0" text="Note" />
+                                      </columns>
+                                    </TableView>
+                                    <GridPane prefHeight="172.0" prefWidth="77.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Mes cours " GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                          <JFXButton fx:id="bibliotheque_BT" buttonType="RAISED" onAction="#allerversBibliotheque" prefHeight="25.0" prefWidth="124.0" ripplerFill="#cad758" style="-fx-background-color: #e41010;" text="Bibliothèque" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                          <JFXButton fx:id="lire_cours_BT" alignment="CENTER" buttonType="RAISED" onAction="#lire_cours_pdf" prefHeight="25.0" prefWidth="132.0" ripplerFill="#e1df69" style="-fx-background-color: #e41010;" text="Lire" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                          <ImageView fitHeight="30.0" fitWidth="30.0" opacity="0.37" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                             <image>
+                                                <Image url="@pdf.png" />
+                                             </image>
+                                             <GridPane.margin>
+                                                <Insets right="30.0" />
+                                             </GridPane.margin>
+                                          </ImageView>
+                                       </children>
+                                    </GridPane>
+                                    <JFXButton fx:id="refaire_test_BT" buttonType="RAISED" onAction="#refaireTest" prefHeight="25.0" prefWidth="137.0" ripplerFill="#e3b912" style="-fx-background-color: #e41010;" text="refaire" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                        <Separator layoutX="989.0" layoutY="47.0" orientation="VERTICAL" prefHeight="498.0" prefWidth="18.0" />
+                        <GridPane layoutX="1014.0" layoutY="71.0" prefHeight="287.0" prefWidth="170.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints maxHeight="115.0" minHeight="0.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="239.0" minHeight="10.0" prefHeight="86.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="206.0" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="82.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Options de filtrage " GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <JFXComboBox fx:id="monsuivi_module_CB" prefHeight="25.0" prefWidth="135.0" promptText="Module" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                              <JFXComboBox fx:id="monsuivi_avancement_CB" prefHeight="25.0" prefWidth="135.0" promptText="Avancement" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                              <JFXTextField fx:id="F_monsuivi_recherche_LE" maxWidth="150.0" minWidth="150.0" onKeyReleased="#rechercherMonSuivi" prefHeight="31.0" prefWidth="150.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                              <ImageView fx:id="search_iconImg" fitHeight="28.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Effectuer un test">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Liste_des_tests_TV" layoutX="14.0" layoutY="64.0" prefHeight="200.0" prefWidth="886.0">
+                          <columns>
+                            <TableColumn fx:id="Liste_des_tests_libelle_CV" prefWidth="236.0" text="Libelle" />
+                            <TableColumn fx:id="Liste_des_tests_module_CV" prefWidth="139.0" text="Module" />
+                              <TableColumn fx:id="Liste_des_tests_avancement_CV" prefWidth="140.0" text="Avancement" />
+                              <TableColumn fx:id="Liste_des_tests_dateCreation_CV" prefWidth="187.0" text="Date de creation" />
+                              <TableColumn fx:id="Liste_des_tests_datemodif_CV" prefWidth="183.0" text="Derniere modification" />
+                          </columns>
+                        </TableView>
+                        <GridPane layoutX="1052.0" layoutY="81.0" prefHeight="293.0" prefWidth="124.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <JFXButton fx:id="effectuer_test_BT" buttonType="RAISED" onAction="#effectuer_test" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: #e41010;" text="Effectuer" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                              <Label text="options de filtrage" />
+                              <JFXComboBox fx:id="faireTestModule_CB" prefHeight="25.0" prefWidth="148.0" promptText="Module" GridPane.rowIndex="1" />
+                              <JFXComboBox fx:id="FaireTestAvancement_CB" prefHeight="25.0" prefWidth="133.0" promptText="Avancement" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <TableView fx:id="lieudutest_TV" layoutX="18.0" layoutY="320.0" prefHeight="200.0" prefWidth="881.0">
+                          <columns>
+                            <TableColumn fx:id="ennonce_CV" prefWidth="279.0" text="Question " />
+                            <TableColumn fx:id="a1_CV" prefWidth="103.0" text="alternative 1" />
+                              <TableColumn fx:id="a2_CV" prefWidth="126.0" text="alternative 2" />
+                              <TableColumn fx:id="a3_CV" prefWidth="127.0" text="alternative 3" />
+                              <TableColumn fx:id="a4_CV" prefWidth="107.0" text="alternative 4" />
+                              <TableColumn fx:id="QCM_Reponse_CV" prefWidth="138.0" text="Reponse" />
+                          </columns>
+                        </TableView>
+                        <Separator layoutX="936.0" layoutY="63.0" orientation="VERTICAL" prefHeight="542.0" prefWidth="30.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Bibliothèque">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutY="-8.0" minHeight="0.0" minWidth="0.0" prefHeight="739.0" prefWidth="1284.0">
+                           <children>
+                              <TableView fx:id="F_inscri_cours_TV" layoutX="26.0" layoutY="125.0" prefHeight="316.0" prefWidth="1068.0">
+                                 <columns>
+                                    <TableColumn fx:id="F_inscri_nom_cours_CV" prefWidth="384.0" text="Nom" />
+                                    <TableColumn fx:id="F_inscri_module_cours_CV" prefWidth="139.0" text="Module" />
+                                    <TableColumn fx:id="F_inscri_avancement_cours_CV" prefWidth="140.0" text="Avancement" />
+                                    <TableColumn fx:id="F_inscri_DataCreation_cours_CV" prefWidth="217.0" text="Date de creation" />
+                                    <TableColumn fx:id="F_inscri_DateModif_cours_CV" prefWidth="187.0" text="Derniere modification" />
+                                 </columns>
+                              </TableView>
+                              <GridPane layoutX="1134.0" layoutY="152.0" prefHeight="380.0" prefWidth="98.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <JFXButton fx:id="F_inscri_BT" buttonType="RAISED" onAction="#ajouter_suivi_cours" prefHeight="25.0" prefWidth="115.0" ripplerFill="#bdc94c" style="-fx-background-color: #e41010;" text="S'inscrire" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                    <Label text="options de filtrage" />
+                                    <JFXComboBox fx:id="F_inscri_module_CB" prefHeight="25.0" prefWidth="96.0" promptText="Module" GridPane.rowIndex="1" />
+                                    <JFXComboBox fx:id="F_inscri_avancement_CB" prefHeight="25.0" prefWidth="113.0" promptText="Avancement" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <Separator layoutX="1094.0" layoutY="78.0" orientation="VERTICAL" prefHeight="478.0" prefWidth="16.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Mes statistiques">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <StackPane fx:id="stackpane" layoutX="13.0" layoutY="9.0" prefHeight="715.0" prefWidth="876.0" />
+                        <TableView fx:id="tablevieuuu" layoutX="894.0" layoutY="2.0" prefHeight="727.0" prefWidth="382.0">
+                          <columns>
+                            <TableColumn fx:id="Cours_conseilles_CV" prefWidth="381.0" text="Cours conseillés " />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

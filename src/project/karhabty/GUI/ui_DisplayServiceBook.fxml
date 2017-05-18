@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1080.0" style="-fx-background-color: white;" stylesheets="@CascadeStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.karhabty.controller.DisplayServiceBookController">
+   <children>
+      <Label layoutX="150.0" layoutY="200.0" text="Batterie" />
+      <Label layoutX="150.0" layoutY="300.0" text="courroie d'alternance" />
+      <Label layoutX="150.0" layoutY="400.0" text="courroie de distribution" />
+      <Label layoutX="650.0" layoutY="200.0" text="Huile de moteur" />
+      <Label layoutX="650.0" layoutY="400.0" text="Pneus" />
+      <Label layoutX="650.0" layoutY="300.0" text="Plaquettes de frein" />
+      <JFXTextField fx:id="Batterie_TF" focusColor="#bd0826" layoutX="300.0" layoutY="200.0" />
+      <JFXTextField fx:id="courroieDalternance_TF" focusColor="#bd0826" layoutX="300.0" layoutY="300.0" />
+      <JFXTextField fx:id="courroieDeDist_TF" focusColor="#bd0826" layoutX="300.0" layoutY="400.0" />
+      <JFXTextField fx:id="HuileMoteur_TF" focusColor="#bd0826" layoutX="800.0" layoutY="200.0" />
+      <JFXTextField fx:id="PlaquettesFrein_TF" focusColor="#bd0826" layoutX="800.0" layoutY="300.0" />
+      <JFXTextField fx:id="Pneus_TF" focusColor="#bd0826" layoutX="800.0" layoutY="400.0" />
+      <JFXButton fx:id="Update_Button" layoutX="904.0" layoutY="625.0" onAction="#UpdateServiceBook" text="Update" />
+      <JFXButton fx:id="Clear_Button" layoutX="807.0" layoutY="625.0" onAction="#Clear_carnet" text="Clear" />
+      <Label fx:id="Voiture_Lab" layoutX="171.0" layoutY="96.0" />
+      <Label fx:id="User_Lab" layoutX="786.0" layoutY="105.0" />
+      <JFXButton fx:id="Stats_Button" layoutX="724.0" layoutY="625.0" onAction="#Stats" text="Stats" />
+      <JFXButton fx:id="Annuler_Button" layoutX="630.0" layoutY="625.0" onAction="#Annuler" text="Annuler" />
+      <JFXButton fx:id="Afficher" layoutX="285.0" layoutY="93.0" onAction="#Afficher" text="Afficher" />
+   </children>
+</AnchorPane>

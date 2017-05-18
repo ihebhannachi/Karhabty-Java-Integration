@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1080.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.karhabty.controller.UserAccountSettingsController">
+   <children>
+      <JFXHamburger fx:id="hamburger" layoutX="1027.0" layoutY="30.0" />
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" prefHeight="680.0" prefWidth="192.0" />
+      <JFXTextField fx:id="First_name" focusColor="#e2a83b" labelFloat="true" layoutX="244.0" layoutY="111.0" maxWidth="226.0" minWidth="226.0" prefHeight="31.0" prefWidth="226.0" promptText="Nom">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="Last_name" focusColor="#e2a83b" labelFloat="true" layoutX="244.0" layoutY="183.0" maxWidth="226.0" minWidth="226.0" prefHeight="31.0" prefWidth="226.0" promptText="Prenom">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="Mobile_num" focusColor="#e2a83b" labelFloat="true" layoutX="610.0" layoutY="111.0" maxWidth="226.0" minWidth="226.0" prefHeight="31.0" prefWidth="226.0" promptText="Mobile">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="Tel_num" focusColor="#e2a83b" labelFloat="true" layoutX="610.0" layoutY="181.0" maxWidth="226.0" minWidth="226.0" prefHeight="31.0" prefWidth="226.0" promptText="Telephone Fix">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="Address" focusColor="#e2a83b" labelFloat="true" layoutX="244.0" layoutY="253.0" maxWidth="226.0" minWidth="226.0" prefHeight="31.0" prefWidth="226.0" promptText="Adresse">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <Text fill="#bd0826" fontSmoothingType="LCD" layoutX="209.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Information Personnel">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="Email" editable="false" focusColor="#e2a83b" labelFloat="true" layoutX="244.0" layoutY="417.0" maxWidth="226.0" minWidth="226.0" prefHeight="31.0" prefWidth="226.0" promptText="Adresse Email">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="NewPassword" focusColor="#e2a83b" labelFloat="true" layoutX="244.0" layoutY="490.0" maxWidth="226.0" minWidth="226.0" prefHeight="31.0" prefWidth="226.0" promptText="Mot de passe">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXPasswordField fx:id="Confirm_password" focusColor="#e2a83b" labelFloat="true" layoutX="610.0" layoutY="490.0" maxWidth="226.0" minWidth="226.0" prefHeight="31.0" prefWidth="226.0" promptText="Confirmer Mot de passe">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <Text fill="#bd0826" fontSmoothingType="LCD" layoutX="209.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Votre Securite">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <JFXButton buttonType="RAISED" layoutX="776.0" layoutY="277.0" onAction="#Update_info" prefHeight="36.0" prefWidth="147.0" ripplerFill="#e2a83b" style="-fx-background-color: #bd0826;" text="Enregistrer modification " textFill="WHITE" />
+      <JFXButton buttonType="RAISED" layoutX="776.0" layoutY="565.0" onAction="#Update_password" prefHeight="36.0" prefWidth="147.0" ripplerFill="#e2a83b" style="-fx-background-color: #bd0826;" text="Enregistrer modification " textFill="WHITE" />
+      <JFXPasswordField fx:id="OldPassword" focusColor="#e2a83b" labelFloat="true" layoutX="610.0" layoutY="417.0" maxWidth="226.0" minWidth="226.0" prefHeight="31.0" prefWidth="226.0" promptText="Ancien Mot de passe">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <Label fx:id="oldpasswordlabel" layoutX="623.0" layoutY="461.0" prefHeight="20.0" prefWidth="158.0" />
+      <Label fx:id="confirmpasswordlabel" layoutX="623.0" layoutY="535.0" prefHeight="20.0" prefWidth="158.0" />
+   </children>
+</AnchorPane>

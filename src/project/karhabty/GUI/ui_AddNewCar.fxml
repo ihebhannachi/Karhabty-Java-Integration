@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1080.0" stylesheets="@CascadeStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.karhabty.controller.AddNewCarController">
+   <children>
+      <Label fx:id="matricule_Lab" layoutX="200.0" layoutY="100.0" text="Matricule" />
+      <Label fx:id="Marque_Lab" layoutX="200.0" layoutY="175.0" text="Marque" />
+      <Label fx:id="Modele_Lab" layoutX="200.0" layoutY="250.0" text="Modele" />
+      <Label fx:id="DateMisCirculation_Lab" layoutX="200.0" layoutY="325.0" prefHeight="17.0" prefWidth="88.0" text="Date1ere mis en circ" />
+      <Label fx:id="puissanceFis_Lab" layoutX="200.0" layoutY="400.0" text="puissance fiscale" />
+      <Label fx:id="Carburant_Lab" layoutX="640.0" layoutY="100.0" text="Carburant" />
+      <Label fx:id="chevauxDyn_Lab" layoutX="640.0" layoutY="175.0" text="chevaux dyn" />
+      <Label fx:id="transmission_Lab" layoutX="640.0" layoutY="250.0" text="Transmission" />
+      <Line endX="100.0" layoutX="540.0" layoutY="242.0" rotate="90.0" scaleX="2.0" startX="-100.0" />
+      <JFXComboBox fx:id="Marque_CB" layoutX="350.0" layoutY="175.0" prefHeight="25.0" prefWidth="140.0" promptText="Marque" />
+      <JFXComboBox fx:id="Modele_CB" layoutX="350.0" layoutY="250.0" prefHeight="25.0" prefWidth="140.0" promptText="Modèle" />
+      <JFXTextField fx:id="matricle_TF" focusColor="#bd0826" layoutX="350.0" layoutY="100.0" />
+      <JFXTextField fx:id="puissanceFiscake_TF" focusColor="#bd0826" layoutX="350.0" layoutY="400.0" />
+      <JFXTextField fx:id="chevauxDyn_TF" focusColor="#bd0826" layoutX="790.0" layoutY="175.0" />
+      <JFXDatePicker fx:id="DateMisCirc_DP" defaultColor="#bd0826" layoutX="346.0" layoutY="325.0" prefHeight="31.0" prefWidth="149.0" showWeekNumbers="true" />
+      <JFXComboBox fx:id="Carburant_CB" layoutX="790.0" layoutY="100.0" prefHeight="25.0" prefWidth="140.0" promptText="carburant" />
+      <JFXComboBox fx:id="transmission_CB" layoutX="790.0" layoutY="250.0" prefHeight="25.0" prefWidth="140.0" promptText="Transmission" />
+      <Label fx:id="kilometrage_Lab" layoutX="640.0" layoutY="325.0" text="Kilométrage" />
+      <JFXTextField fx:id="kilometrage_TF" focusColor="#bd0826" layoutX="790.0" layoutY="325.0" />
+      <JFXButton fx:id="Ajout_Button" layoutX="850.0" layoutY="500.0" onAction="#Ajouter" text="Ajouter" />
+      <Label fx:id="PuissFisc_Err_Lab" layoutX="350.0" layoutY="443.0" textFill="#ee0804" />
+      <Label fx:id="Kilom_Err_Lab" layoutX="790.0" layoutY="383.0" textFill="#ee0804" />
+      <Label fx:id="ChevauxDyn_Err_Lab" layoutX="790.0" layoutY="219.0" textFill="#ee0804" />
+      <Label fx:id="Erreur_Lab" layoutX="513.0" layoutY="517.0" textFill="#ee0804" />
+      <Label fx:id="User_Lab" layoutX="695.0" layoutY="41.0" />
+      <JFXButton fx:id="Annuler_Button" layoutX="776.0" layoutY="500.0" onAction="#Annuler" text="Annuler" />
+   </children>
+</AnchorPane>
+

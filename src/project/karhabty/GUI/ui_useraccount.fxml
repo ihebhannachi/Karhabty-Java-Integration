@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.karhabty.controller.UserAccountController">
+   <children>
+      <ImageView fitHeight="680.0" fitWidth="1080.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/profilBackground.jpg" />
+         </image>
+      </ImageView>
+      <JFXHamburger fx:id="hamburger" layoutX="1014.0" layoutY="31.0" />
+      <ImageView fx:id="profile_image" fitHeight="150.0" fitWidth="150.0" layoutX="80.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="image_btn" buttonType="RAISED" layoutX="80.0" layoutY="368.0" onAction="#GetImg" ripplerFill="#e2a83b" style="-fx-background-color: #bd0826;" text="Modifier la photo de profil" textFill="WHITE" />
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" prefHeight="680.0" prefWidth="180.0" />
+      <Text fx:id="username_text" layoutX="295.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" underline="true">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

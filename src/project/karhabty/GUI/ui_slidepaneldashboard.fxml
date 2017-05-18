@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="176.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.karhabty.controller.SlidePanelDashboardController">
+   <children>
+      <ImageView fitHeight="145.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 15;">
+         <image>
+            <Image url="@../../../img/Logo1.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" prefHeight="46.0" prefWidth="187.0" text="Liste des utilisateurs">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" prefHeight="46.0" prefWidth="187.0" text="Settings">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" onAction="#handleButtonAction" prefHeight="46.0" prefWidth="187.0" text="Gérer les annonce">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" onAction="#handleButtonAction" prefHeight="46.0" prefWidth="187.0" text="Déconnexion">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</VBox>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.karhabty.controller.AdminDashboardController">
+   <children>
+      <Text fontSmoothingType="LCD" layoutX="92.0" layoutY="528.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistique : " underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <JFXHamburger fx:id="hamburger" layoutX="1027.0" layoutY="30.0" />
+      <TableView fx:id="tableview" layoutX="60.0" layoutY="120.0" prefHeight="378.0" prefWidth="982.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="88.0" text="ID" />
+          <TableColumn fx:id="last_name" prefWidth="70.0" text="Nom" />
+            <TableColumn fx:id="first_name" prefWidth="75.0" text="Prenom" />
+            <TableColumn fx:id="email" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="tel_num" prefWidth="75.0" text="Tel" />
+            <TableColumn fx:id="mobile_num" prefWidth="75.0" text="Mobile" />
+            <TableColumn fx:id="address" prefWidth="75.0" text="Adresse" />
+            <TableColumn fx:id="last_login" prefWidth="75.0" text="Last Login" />
+            <TableColumn fx:id="creation_date" prefWidth="83.0" text="Date de creation" />
+            <TableColumn fx:id="enabled" prefWidth="76.0" text="Etat du compte" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" prefHeight="680.0" prefWidth="192.0" />
+      <JFXButton fx:id="disable_btn" buttonType="RAISED" layoutX="818.0" layoutY="88.0" onAction="#handleButtonAction" style="-fx-background-color: red;" text="Bloquer compte" textFill="WHITE" />
+      <JFXButton fx:id="enable_btn" buttonType="RAISED" layoutX="926.0" layoutY="88.0" onAction="#handleButtonAction" style="-fx-background-color: green;" text="Débloquer compte" textFill="WHITE" />
+      <Text fx:id="account_number" layoutX="192.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="account_number_yearly" layoutX="192.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="account_disabled" layoutX="192.0" layoutY="609.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="requested_pwd_num" layoutX="192.0" layoutY="631.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <JFXButton buttonType="RAISED" layoutX="683.0" layoutY="88.0" onAction="#handleButtonAction" style="-fx-background-color: #e2a83b;" text="Generate csv backup" textFill="WHITE" />
+      <TextField fx:id="search" layoutX="192.0" layoutY="88.0" promptText="Search" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1080.0" style="-fx-background-color: white;" stylesheets="@CascadeStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.karhabty.controller.PiecesStatisticsController">
+   <children>
+      <BarChart fx:id="BarChart" layoutX="122.0" layoutY="86.0" prefHeight="400.0" prefWidth="718.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <NumberAxis fx:id="y" label="Duree de vie en mille km" layoutX="84.0" layoutY="196.0" prefHeight="155.0" prefWidth="38.0" side="LEFT" />
+      <CategoryAxis label="Piece" layoutX="364.0" layoutY="493.0" side="BOTTOM" fx:id="x" />
+      <JFXTextField fx:id="Voiture_TF" editable="false" focusColor="#bd0826" layoutX="156.0" layoutY="47.0" />
+      <Label fx:id="User_Lab" layoutX="601.0" layoutY="46.0" />
+      <JFXButton fx:id="Annuler_Button" layoutX="692.0" layoutY="598.0" onAction="#Annuler" text="Annuler" />
+      <JFXButton fx:id="Afficher" layoutX="385.0" layoutY="50.0" onAction="#Afficher" text="Afficher Statiques" />
+      <Label layoutX="122.0" layoutY="558.0" text="Batterie:50 mkm" />
+      <Label layoutX="255.0" layoutY="558.0" text="courroie dalternance:60 mkm" />
+      <Label layoutX="467.0" layoutY="558.0" text="courroie de distribution:80 mkm" />
+      <Label layoutX="122.0" layoutY="602.0" text="huile de moteur:9mkm" />
+      <Label layoutX="291.0" layoutY="602.0" text="plaquette de frein:40mkm" />
+      <Label layoutX="467.0" layoutY="602.0" text="Pneus:50mkm" />
+   </children>
+</AnchorPane>
